@@ -1,0 +1,29 @@
+{
+  "display_name": "plex",
+  "maintainer": "hackadog@datadoghq.com",
+  "manifest_version": "1.0.0",
+  "name": "plex",
+  "metric_prefix": "plex.",
+  "metric_to_check": "",
+  "creates_events": false,
+  "short_description": "",
+  "guid": "6939df21-cae1-46a3-8b28-cf8ff1fe6d5b",
+  "support": "contrib",
+  "supported_os": [
+    "linux",
+    "mac_os",
+    "windows"
+  ],
+  "public_title": "Datadog-plex Integration",
+  "categories": [
+    ""
+  ],
+  "type": "check",
+  "is_public": false,
+  "integration_id": "plex",
+  "assets": {
+    "dashboards": {},
+    "monitors": {},
+    "service_checks": "assets/service_checks.json"
+  }
+}
