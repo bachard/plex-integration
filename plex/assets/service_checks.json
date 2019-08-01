@@ -1,1 +1,11 @@
-[]
+[
+    {
+        "agent_version": "6.13.0",
+        "integration": "plex",
+        "check": "plex.server",
+        "statuses": ["ok", "critical"],
+        "groups": [],
+        "name": "Plex Server check",
+        "description": "Returns `CRITICAL` if the check access the Plex Server, `OK` otherwise."
+    }
+]

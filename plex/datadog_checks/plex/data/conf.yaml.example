@@ -10,4 +10,4 @@ instances:
     ## @param token - string - required
     ## The authentication token for the Plex Server
     #
-  - token:
+    token:
