@@ -1,6 +1,12 @@
 init_config:
 
 instances:
+    ## @param baseurl - string - optional - default: http://localhost:32400
+    ## The url of the Plex Server
+    ## 
+    #
+  - baseurl: http://localhost:32400
+
     ## @param token - string - required
     ## The authentication token for the Plex Server
     #
