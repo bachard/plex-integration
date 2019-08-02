@@ -20,13 +20,6 @@ class PlexCheck(AgentCheck):
         else:
             self.service_check("plex.server", self.OK)
 
-        movies_playing_count = 0
-
-        for section in plex.library.sections():
-            if section.TYPE == MovieSection.TYPE:
-                for movie in section.all():
-                    # print(movie.title, movie.isWatched, movie.viewCount)
-                    if movie.isWatched:
-                        movies_playing_count += 1
-
-        self.gauge('plex.movies.playing', movies_playing_count)
+    def _report_media_in_use(self):
+        media_in_use = len(plex.sessions())
+        self.gauge('plex.media.in_use', media_in_use)
