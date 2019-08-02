@@ -19,7 +19,9 @@ class PlexCheck(AgentCheck):
             self.service_check("plex.server", self.CRITICAL, message=str(e))
         else:
             self.service_check("plex.server", self.OK)
+        
+        self._report_media_in_use(plex)
 
-    def _report_media_in_use(self):
+    def _report_media_in_use(self, plex):
         media_in_use = len(plex.sessions())
         self.gauge('plex.media.in_use', media_in_use)
